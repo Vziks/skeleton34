@@ -20,7 +20,7 @@ security:
             provider: admin_user_provider
             pattern: ^/admin
             form_login:
-#                login_path: /admin/auth
+                login_path: /admin/auth
                 check_path: /admin/security/login/
                 username_parameter: _email
                 password_parameter: _password
@@ -43,4 +43,5 @@ security:
             anonymous: ~
 
     access_control:
+        - { path: ^/admin/auth$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }

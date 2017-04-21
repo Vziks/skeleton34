@@ -51,7 +51,7 @@ class AdminSecurityController extends Controller
 
 
     /**
-     * @Route("/login", name="login")
+     * @Route("/admin/auth", name="admin_auth")
      */
     public function loginfAction(Request $request)
     {
