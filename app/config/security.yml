@@ -30,13 +30,9 @@ security:
                 require_previous_session: false
             logout:
                 path: /admin/logout
-            anonymous:    true
-            remember_me:
-                remember_me_parameter: '_remember_me'
-                secret: '%secret%'
-                lifetime: 86400
-                path:     /admin/
-                domain:   ~
+                target: /admin
+                invalidate_session: false
+            anonymous: true
 
         main:
             pattern: /
@@ -44,4 +40,4 @@ security:
 
     access_control:
         - { path: ^/admin/auth$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/admin/, role: [ROLE_ADMIN, IS_AUTHENTICATED_REMEMBERED ]}

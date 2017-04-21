@@ -1,4 +1,4 @@
-Site settings: Настройка сайта
+Site settings: Настройка приложения
 Name: Имя
 Turn Off: Вкл/Выкл
 Start At: Начало
@@ -6,3 +6,12 @@ Stop At: Окончание
 Allowips: Разрешенные IP
 AdminUser: Пользователи
 Config: Настройка
+Admin User List: Список пользователей
+Action: Действия
+Created At: Создано
+Updated At: Обновлено
+Email: Email
+Id: Id
+Config Site List: Настройки приложения
+Plain Password: Пароль
+

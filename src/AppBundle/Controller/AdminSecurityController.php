@@ -14,6 +14,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Validator\ConstraintViolation;
 use Symfony\Component\Validator\ConstraintViolationList;
@@ -46,16 +47,27 @@ class AdminSecurityController extends Controller
      */
     public function loginAction()
     {
-        throw new \RuntimeException('Invalid security configuration. Set correct chec1k_login path');
+        throw new \RuntimeException('Invalid security configuration. Set correct check_login path');
     }
 
 
     /**
      * @Route("/admin/auth", name="admin_auth")
      */
-    public function loginfAction(Request $request)
+    public function loginfAction()
     {
+
+        if($this->getUser()) {
+            return $this->redirect($this->generateUrl('sonata_admin_dashboard'));
+        }
         return $this->render('security/login.html.twig');
+    }
+
+    /**
+     * @Route("/admin/logout", name="logout")
+     */
+    public function logoutAction()
+    {
     }
 
 }
