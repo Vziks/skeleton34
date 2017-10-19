@@ -2,6 +2,7 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\AdminUser;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -11,6 +12,9 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 class AdminUserAdmin extends AbstractAdmin
 {
+
+    /** @var \Symfony\Component\DependencyInjection\ContainerInterface */
+    private $container;
 
     /**
      * @param DatagridMapper $datagridMapper
@@ -50,11 +54,24 @@ class AdminUserAdmin extends AbstractAdmin
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
+
+        $roles = $this->container->getParameter('security.role_hierarchy.roles');
+
+        $rolesChoices = self::flattenRoles($roles);
+
         $formMapper
             ->add('email')
-            ->add('plainPassword', 'text', array(
+            ->add('plainPassword', 'text', [
                 'required' => (!$this->getSubject() || is_null($this->getSubject()->getId())),
-            ))
+            ])
+            ->add(
+                'roles',
+                'choice',
+                array(
+                    'choices' => $rolesChoices,
+                    'multiple' => true,
+                )
+            )
             ->add('createdAt', null, [
                 'disabled' => true
             ])
@@ -73,4 +90,33 @@ class AdminUserAdmin extends AbstractAdmin
             ->add('id')
         ;
     }
+
+    public function setContainer (\Symfony\Component\DependencyInjection\ContainerInterface $container) {
+        $this->container = $container;
+    }
+
+    /**
+     * @param $rolesHierarchy
+     * @return array
+     */
+    protected static function flattenRoles($rolesHierarchy)
+    {
+        $flatRoles = [];
+        foreach($rolesHierarchy as $roles) {
+
+            if(empty($roles)) {
+                continue;
+            }
+
+            foreach($roles as $role) {
+                if(!isset($flatRoles[$role])) {
+                    $flatRoles[$role] = $role;
+                }
+            }
+        }
+
+        return $flatRoles;
+    }
+
+
 }

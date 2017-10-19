@@ -29,7 +29,6 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-
             new Sonata\ClassificationBundle\SonataClassificationBundle(),
             new Sonata\MediaBundle\SonataMediaBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
@@ -45,15 +44,20 @@ class AppKernel extends Kernel
 
             new JMS\SerializerBundle\JMSSerializerBundle(),
 
+            new Kachkaev\AssetsVersionBundle\KachkaevAssetsVersionBundle(),
 
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
 
-//            new Vesax\AdminExtraBundle\VesaxAdminExtraBundle($this),
-//            new Vesax\SEOBundle\VesaxSEOBundle(),
-
-            new ADW\JsContextBundle\ADWJsContextBundle(),
-            new ADW\CommonBundle\ADWCommonBundle(),
+//             Install instruction  https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/resource_owners/facebook.md
+//            new Http\HttplugBundle\HttplugBundle(),
+//            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
             new ADW\ConfigBundle\ADWConfigBundle(),
+            new ADW\GeoIpBundle\ADWGeoIpBundle(),
+            new \ADW\SEOBundle\ADWSEOBundle(),
+            new ADW\JsContextBundle\ADWJsContextBundle(),
+            new ADW\CommonBundle\ADWCommonBundle(),
+            new ADW\SonataMediaExtraBundle\ADWSonataMediaExtraBundle(),
 
             new AppBundle\AppBundle(),
         ];

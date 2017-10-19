@@ -1,5 +1,5 @@
 # Что такое? #
-База для новых проектов. Symfony 3.2.
+База для новых проектов. Symfony 3.3.
 ***
 # Что там есть? #
 
@@ -22,7 +22,10 @@
 ### [ADW Js Context Bundle](https://bitbucket.org/prodhub/js-context-bundle) ###
 Вывод данных в контекст js.
 
-### [Vesax SEO Bundle](https://github.com/Vesax/SEOBundle) ###
+### [ADW Geo Bundle](https://bitbucket.org/prodhub/adw-geoip-bundle) ###
+Geo Ip БД.
+
+### [ADW SEO Bundle](https://bitbucket.org/prodhub/seo-bundle) ###
 Настройки метаданных страниц и редиректов в админке.
 
 Еще много чего. В этом разделе описывать не предназначение каждого бандла, а описывать почему он нужен именно в скелетоне и специфику его использования в скелетоне (если это не очевидно).

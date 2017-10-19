@@ -20,6 +20,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class AdminUser implements UserInterface
 {
+
+    const ROLE_USER_SUPER_ADMIN = 'ROLE_ADMIN';
+    const ROLE_USER = 'ROLE_USER';
+    const ROLE_USER_GOD_ADMIN = 'ROLE_SUPER_ADMIN';
+
+
     use Timestampable;
 
     /**
@@ -61,6 +67,12 @@ class AdminUser implements UserInterface
     protected $passwordUpdatedAt;
 
     /**
+     * @var array
+     * @ORM\Column(type="array", nullable=true)
+     */
+    protected $roles = array();
+
+    /**
      * AdminUser constructor.
      *
      * @param string $email
@@ -73,13 +85,26 @@ class AdminUser implements UserInterface
     }
 
 
-    /**
-     * @inheritdoc
-     */
     public function getRoles()
     {
-        return ['ROLE_SUPER_ADMIN','ROLE_SONATA_ADMIN','ROLE_USER'];
+        if (!in_array(self::ROLE_USER, $this->roles)) {
+            $this->roles[] = self::ROLE_USER;
+        }
+
+        return $this->roles;
     }
+
+    /**
+     * @param array $roles
+     * @return $this
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+
+        return $this;
+    }
+
 
     /**
      * @return int

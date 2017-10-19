@@ -9,6 +9,8 @@ services:
         arguments: [~, AppBundle\Entity\AdminUser, SonataAdminBundle:CRUD]
         tags:
             - { name: sonata.admin, manager_type: orm, group: AdminUser, label: AdminUser }
+        calls:
+            - [ setContainer, [ "@service_container" ] ]
 
     app.admin.password.listener:
         class: AppBundle\EventListener\AdminUserPasswordListener

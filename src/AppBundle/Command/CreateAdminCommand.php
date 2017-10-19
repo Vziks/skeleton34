@@ -65,6 +65,8 @@ class CreateAdminCommand extends ContainerAwareCommand
                 $newAdminRecord->setPlainPassword($password);
             }
 
+            $newAdminRecord->setRoles(['ROLE_ADMIN','ROLE_SUPER_ADMIN']);
+
             $this->em->persist($newAdminRecord);
 
             try {
