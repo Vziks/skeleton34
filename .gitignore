@@ -24,6 +24,8 @@
 /app/phpunit.xml
 
 /bin/*
+!bin/console
+!bin/symfony_requirements
 !bin/.gitkeep
 !bin/setup*
 
