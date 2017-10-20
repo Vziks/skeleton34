@@ -1,8 +1,8 @@
 <?php
 
-namespace AppBundle\Repository;
+namespace ADW\UserBundle\Repository;
 
-use AppBundle\Entity\AdminUser;
+use ADW\UserBundle\Entity\AdminUser;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query\Expr\Join;
 use Psr\Log\LoggerInterface;
@@ -54,7 +54,7 @@ class AdminUserRepository extends EntityRepository implements UserProviderInterf
      */
     public function supportsClass($class)
     {
-        return $class == 'AppBundle\Entity\AdminUser';
+        return $class == 'ADW\UserBundle\Entity\AdminUser';
     }
 
     /**

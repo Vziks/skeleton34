@@ -1,13 +1,13 @@
 <?php
 
-namespace AppBundle\Controller;
+namespace ADW\UserBundle\Controller;
 
 use ADW\CommonBundle\Annotation\ApiDoc;
 use ADW\CommonBundle\Controller\Controller;
 use ADW\CommonBundle\Exception\InvalidFormException;
 use ADW\CommonBundle\Exception\ValidationViolationException;
 use AppBundle\AppBundle;
-use AppBundle\Entity\AdminUser;
+use ADW\UserBundle\Entity\AdminUser;
 //use FOS\RestBundle\Controller\Annotations\View;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -22,7 +22,7 @@ use Symfony\Component\Validator\ConstraintViolationList;
 /**
  * Class SecurityController.
  *
- * @package AppBundle\Controller
+ * @package ADW\UserBundle\Controller
  * @author Anton Prokhorov
  *
  */

@@ -4,31 +4,3 @@ parameters:
     #parameter_name: value
 
 services:
-    app.admin.adminuser:
-        class: AppBundle\Admin\AdminUserAdmin
-        arguments: [~, AppBundle\Entity\AdminUser, SonataAdminBundle:CRUD]
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: AdminUser, label: AdminUser }
-        calls:
-            - [ setContainer, [ "@service_container" ] ]
-
-    app.admin.password.listener:
-        class: AppBundle\EventListener\AdminUserPasswordListener
-        arguments:
-            - "@security.password_encoder"
-        tags:
-            - { name: doctrine.event_listener, event: prePersist, method: prePersist }
-            - { name: doctrine.event_listener, event: preUpdate, method: preUpdate }
-
-    admin.security.admin_authentication_handler:
-        class: AppBundle\Security\Handler\AdminAuthenticationHandler
-        arguments:
-            - "@router"
-
-    app.admin_user_repository:
-        class: Doctrine\ORM\EntityRepository
-        factory: ["@doctrine.orm.entity_manager", getRepository]
-        arguments:
-            - "AppBundle:AdminUser"
-        calls:
-            - [setLogger, ["@monolog.logger"]]

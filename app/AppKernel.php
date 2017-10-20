@@ -59,7 +59,11 @@ class AppKernel extends Kernel
             new ADW\CommonBundle\ADWCommonBundle(),
             new ADW\SonataMediaExtraBundle\ADWSonataMediaExtraBundle(),
 
+            new ADW\UserBundle\ADWUserBundle(),
+
+
             new AppBundle\AppBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

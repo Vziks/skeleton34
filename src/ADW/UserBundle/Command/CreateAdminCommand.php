@@ -1,8 +1,8 @@
 <?php
 
-namespace AppBundle\Command;
+namespace ADW\UserBundle\Command;
 
-use AppBundle\Entity\AdminUser;
+use ADW\UserBundle\Entity\AdminUser;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Persisters\PersisterException;
 use Doctrine\ORM\Tools\ToolsException;

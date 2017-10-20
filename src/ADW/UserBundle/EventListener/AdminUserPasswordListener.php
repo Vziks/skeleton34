@@ -1,9 +1,9 @@
 <?php
 
 
-namespace AppBundle\EventListener;
+namespace ADW\UserBundle\EventListener;
 
-use AppBundle\Entity\AdminUser;
+use ADW\UserBundle\Entity\AdminUser;
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoder;
 

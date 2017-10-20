@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AppBundle\Entity;
+namespace ADW\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Model\Timestampable\Timestampable;
@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * Class AdminUser
  * @package AppBundle\Entity
  *
- * @ORM\Entity(repositoryClass="AppBundle\Repository\AdminUserRepository")
+ * @ORM\Entity(repositoryClass="ADW\UserBundle\Repository\AdminUserRepository")
  * @ORM\Table(name="admin__user")
  * @ORM\HasLifecycleCallbacks()
  */

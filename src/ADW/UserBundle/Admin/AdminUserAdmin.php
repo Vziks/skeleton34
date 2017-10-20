@@ -1,8 +1,8 @@
 <?php
 
-namespace AppBundle\Admin;
+namespace ADW\UserBundle\Admin;
 
-use AppBundle\Entity\AdminUser;
+use ADW\UserBundle\Entity\AdminUser;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 
 use Sonata\AdminBundle\Datagrid\DatagridMapper;

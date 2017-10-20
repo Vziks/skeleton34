@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Security\Handler;
+namespace ADW\UserBundle\Security\Handler;
 
 use AppBundle\AppBundle;
 use Symfony\Component\HttpFoundation\RedirectResponse;
