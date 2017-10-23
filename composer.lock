@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "589e749660d2c9e25c813921f39fce01",
+    "content-hash": "d4d157064bbf6f35bdabc749c8db335e",
     "packages": [
         {
             "name": "adw/common-bundle",
@@ -223,6 +223,46 @@
                 "issues": "https://bitbucket.org/prodhub/adw-sonata-media-extra-bundle/issues"
             },
             "time": "2017-06-27T14:48:50+00:00"
+        },
+        {
+            "name": "adw/user-bundle",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/prodhub/adw-user-bundle.git",
+                "reference": "fe1f8e8b82887082ae9def73837e72569f97cb57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/prodhub/adw-user-bundle/get/fe1f8e8b82887082ae9def73837e72569f97cb57.zip",
+                "reference": "fe1f8e8b82887082ae9def73837e72569f97cb57",
+                "shasum": ""
+            },
+            "require": {
+                "adw/common-bundle": "^1.0",
+                "sonata-project/admin-bundle": "^3.1",
+                "symfony/symfony": "^3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ADW\\UserBundle\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Prokhorov",
+                    "email": "vziks@live.ru"
+                }
+            ],
+            "homepage": "https://bitbucket.org/prodhub/adw-user-bundle",
+            "support": {
+                "source": "https://bitbucket.org/prodhub/adw-user-bundle/src/fe1f8e8b82887082ae9def73837e72569f97cb57/?at=master"
+            },
+            "time": "2017-10-23T10:48:00+00:00"
         },
         {
             "name": "behat/transliterator",
