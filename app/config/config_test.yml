@@ -1,20 +1,10 @@
 imports:
     - { resource: config_dev.yml }
 
-doctrine:
-    dbal:
-        default_connection: default
-        connections:
-            default:
-                driver:   pdo_sqlite
-                path:     '%kernel.cache_dir%/test.db'
-
 framework:
     test: ~
     session:
-        storage_id: session.storage.mock_file
-    profiler:
-        collect: false
+        storage_id: session.storage.filesystem
 
 web_profiler:
     toolbar: false
@@ -25,3 +15,11 @@ swiftmailer:
 
 liip_functional_test:
     cache_sqlite_db: true
+
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver:   pdo_sqlite
+                path:     "%kernel.cache_dir%/test.db"

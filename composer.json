@@ -23,7 +23,7 @@
     "require": {
         "php": ">=5.5.9",
         "adw/common-bundle": "^1.0",
-        "adw/config-bundle": "^1.3",
+        "adw/config-bundle": "^1.4",
         "adw/geoip-bundle": "^1.0",
         "adw/js-context-bundle": "^0.4.2",
         "adw/seo-bundle": "^1.0",
