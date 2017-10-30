@@ -219,3 +219,9 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+#ADW Common Configuration
+adw_common:
+    response_headers:
+        X-Frame-Options: deny
+        X-Content-Type-Options: nosniff
