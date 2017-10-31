@@ -61,6 +61,10 @@ class AppKernel extends Kernel
             new ADW\CommonBundle\ADWCommonBundle(),
             new ADW\SonataMediaExtraBundle\ADWSonataMediaExtraBundle(),
 
+//            new DataDog\AuditBundle\DataDogAuditBundle(),
+
+            new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
+
             new ADW\UserBundle\ADWUserBundle(),
 
 

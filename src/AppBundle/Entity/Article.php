@@ -12,6 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @author Anton Prokhorov
  *
  * @ORM\Entity()
+ *
  */
 class Article
 {

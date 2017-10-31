@@ -5,6 +5,7 @@ namespace AppBundle\Admin;
 use Doctrine\DBAL\Types\StringType;
 use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
+use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -25,6 +26,7 @@ class ArticleAdmin extends AbstractAdmin
         ;
     }
 
+
     /**
      * @param ListMapper $listMapper
      */
@@ -36,6 +38,7 @@ class ArticleAdmin extends AbstractAdmin
             ->add('_action', 'actions', [
                 'actions' => [
                     'show' => [],
+                    'history' => ['template' => 'AppBundle::Admin/list__action_history.html.twig'],
                     'edit' => [],
                     'delete' => [],
                 ],
@@ -61,13 +64,14 @@ class ArticleAdmin extends AbstractAdmin
         ;
     }
 
-    /**
-     * @param ShowMapper $showMapper
-     */
-    protected function configureShowFields(ShowMapper $showMapper)
+    public function configureShowFields(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('id')
+            ->add('title')
+            ->add('content')
+            ->add('preview')
+            ->add('tags')
         ;
     }
+
 }

@@ -225,3 +225,15 @@ adw_common:
     response_headers:
         X-Frame-Options: deny
         X-Content-Type-Options: nosniff
+
+
+#data_dog_audit:
+#    audited_entities:
+#        - AppBundle\Entity\Article
+#    unaudited_entities:
+#        - AppBundle\Entity\User
+#        - ADW\UserBundle\Entity\AdminUser
+
+sonata_doctrine_orm_admin:
+    audit:
+        force: true
