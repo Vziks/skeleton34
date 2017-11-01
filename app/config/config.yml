@@ -236,4 +236,4 @@ adw_common:
 
 sonata_doctrine_orm_admin:
     audit:
-        force: true
+        force: false
