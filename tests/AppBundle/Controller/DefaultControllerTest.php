@@ -19,4 +19,17 @@ class DefaultControllerTest extends WebTestCase
 
         $this->assertContains('Welcome to Symfony', $crawler->filter('#container h1')->text());
     }
+
+
+    public function testApiDocIndex()
+    {
+        $client = static::createClient();
+
+        $crawler = $client->request('GET', '/api/doc');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        $this->assertContains('API documentation', $crawler->filter('#header h1')->text());
+    }
+
 }
