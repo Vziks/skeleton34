@@ -226,16 +226,16 @@
         },
         {
             "name": "adw/user-bundle",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/prodhub/adw-user-bundle.git",
-                "reference": "0658da53c95cfa57c691c2dec3f0fe20455bc9c2"
+                "reference": "f9697dfccb38c01dd9c9ffe5014807551aa5299c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/prodhub/adw-user-bundle/get/0658da53c95cfa57c691c2dec3f0fe20455bc9c2.zip",
-                "reference": "0658da53c95cfa57c691c2dec3f0fe20455bc9c2",
+                "url": "https://bitbucket.org/prodhub/adw-user-bundle/get/f9697dfccb38c01dd9c9ffe5014807551aa5299c.zip",
+                "reference": "f9697dfccb38c01dd9c9ffe5014807551aa5299c",
                 "shasum": ""
             },
             "require": {
@@ -260,9 +260,9 @@
             ],
             "homepage": "https://bitbucket.org/prodhub/adw-user-bundle",
             "support": {
-                "source": "https://bitbucket.org/prodhub/adw-user-bundle/src/0658da53c95cfa57c691c2dec3f0fe20455bc9c2/?at=1.0.2"
+                "source": "https://bitbucket.org/prodhub/adw-user-bundle/src/f9697dfccb38c01dd9c9ffe5014807551aa5299c/?at=1.0.3"
             },
-            "time": "2017-10-25T10:05:55+00:00"
+            "time": "2017-12-08T12:19:27+00:00"
         },
         {
             "name": "behat/transliterator",
