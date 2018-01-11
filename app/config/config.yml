@@ -87,10 +87,10 @@ swiftmailer:
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'
-    spool:
-        type: file
-        path: '%kernel.root_dir%/logs/spooldir'
-
+    spool:     { type: memory }
+#    spool:
+#        type: file
+#        path: '%kernel.root_dir%/logs/spooldir'
 
 # Doctrine Migrations Configuration
 doctrine_migrations:
@@ -211,14 +211,6 @@ fos_user:
 #        group_manager: sonata.user.orm.group_manager # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
 #    service:
 #        user_manager: sonata.user.orm.user_manager  # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
-
-# Swiftmailer Configuration
-swiftmailer:
-    transport: "%mailer_transport%"
-    host:      "%mailer_host%"
-    username:  "%mailer_user%"
-    password:  "%mailer_password%"
-    spool:     { type: memory }
 
 #ADW Common Configuration
 adw_common:
