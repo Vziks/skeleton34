@@ -21,7 +21,7 @@
         ]
     },
     "require": {
-        "php": ">=5.5.9",
+        "php": "^7.1",
         "adw/common-bundle": "^1.0",
         "adw/config-bundle": "^1.4",
         "adw/geoip-bundle": "^1.0",
