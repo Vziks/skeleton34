@@ -7,7 +7,6 @@
 
 namespace AppBundle\DataFixtures\ORM;
 
-
 use AppBundle\AppBundle;
 use AppBundle\Entity\Article;
 use AppBundle\Entity\Resource;
@@ -66,7 +65,6 @@ class LoadArticleDataFixture extends AbstractFixture implements ContainerAwareIn
 
 
         for ($i = 0; $i < 10; $i++) {
-
             $article = new Article();
 
             $article
@@ -83,8 +81,6 @@ class LoadArticleDataFixture extends AbstractFixture implements ContainerAwareIn
             }
 
             $manager->persist($article);
-
-
         }
 
         $manager->flush();

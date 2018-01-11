@@ -31,5 +31,4 @@ class DefaultControllerTest extends WebTestCase
 
         $this->assertContains('API documentation', $crawler->filter('#header h1')->text());
     }
-
 }

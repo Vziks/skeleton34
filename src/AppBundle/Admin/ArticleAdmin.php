@@ -73,5 +73,4 @@ class ArticleAdmin extends AbstractAdmin
             ->add('tags')
         ;
     }
-
 }

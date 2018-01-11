@@ -159,5 +159,4 @@ class Article
         $this->preview = $preview;
         return $this;
     }
-
 }

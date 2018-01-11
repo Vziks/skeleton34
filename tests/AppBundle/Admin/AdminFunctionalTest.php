@@ -2,10 +2,10 @@
 
 namespace Tests\AppBundle\Controller;
 
-
 use Liip\FunctionalTestBundle\Test\WebTestCase;
 use Symfony\Bundle\FrameworkBundle\Client;
 use ADW\UserBundle\DataFixtures\ORM\LoadAdminData as FixtureAdmin;
+
 /**
  * Class AdminFunctionalTest.
  * Project skeleton-symfony-backend.

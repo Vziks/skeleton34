@@ -28,7 +28,6 @@ class LoadArticleTagData extends AbstractFixture implements OrderedFixtureInterf
         $context = $manager->getRepository('ApplicationSonataClassificationBundle:Context')->find('default');
 
         for ($i = 0; $i < 50; $i++) {
-
             $tag = new Tag();
             $tag->setName($faker->text(10));
             $tag->setSlug(uniqid());
@@ -36,7 +35,6 @@ class LoadArticleTagData extends AbstractFixture implements OrderedFixtureInterf
             $tag->setContext($context);
 
             $manager->persist($tag);
-
         }
 
         $manager->flush();
@@ -49,5 +47,4 @@ class LoadArticleTagData extends AbstractFixture implements OrderedFixtureInterf
     {
         return 0;
     }
-
 }

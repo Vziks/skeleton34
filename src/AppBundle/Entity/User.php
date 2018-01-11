@@ -18,7 +18,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
  */
-class User extends BaseUser{
+class User extends BaseUser
+{
 
     /**
      * @ORM\Id
@@ -32,5 +33,4 @@ class User extends BaseUser{
         parent::__construct();
         // your own logic
     }
-
 }
