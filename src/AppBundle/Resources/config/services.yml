@@ -4,3 +4,9 @@ services:
         arguments: [~, AppBundle\Entity\Article, SonataAdminBundle:CRUD]
         tags:
             - { name: sonata.admin, manager_type: orm, audit: true, group: Article, label: Article }
+
+    AppBundle\DataFixtures\ORM\LoadArticleTagData:
+        tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\LoadArticleDataFixture:
+        tags: [doctrine.fixture.orm]
