@@ -47,9 +47,9 @@ class LoadArticleDataFixture extends AbstractFixture implements ContainerAwareIn
         $manager->clear();
         $faker = Factory::create('ru_RU');
 
-        $context = $manager->getRepository('ApplicationSonataClassificationBundle:Context')->find('default');
+        $context = $manager->getRepository(Context::class)->find('default');
 
-        $tags = $manager->getRepository('ApplicationSonataClassificationBundle:Tag')->findBy(['context' => $context]);
+        $tags = $manager->getRepository(Tag::class)->findBy(['context' => $context]);
 
         $imageForList = new Media();
         $imageForList->setBinaryContent(new UploadedFile(
@@ -60,7 +60,7 @@ class LoadArticleDataFixture extends AbstractFixture implements ContainerAwareIn
             null,
             true
         ));
-        $imageForList->setContext('default');
+        $imageForList->setContext($context);
         $imageForList->setProviderName('sonata.media.provider.image');
 
 
@@ -70,8 +70,7 @@ class LoadArticleDataFixture extends AbstractFixture implements ContainerAwareIn
             $article
                 ->setTitle($faker->title)
                 ->setContent($faker->text(400))
-                ->setPreview($faker->text(100))
-            ;
+                ->setPreview($faker->text(100));
 
             $keys = array_rand(is_array($tags) ? $tags : iterator_to_array($tags), rand(2, count($tags)));
 

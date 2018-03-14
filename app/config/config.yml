@@ -77,8 +77,8 @@ doctrine:
         mappings:
             SonataClassificationBundle: ~
             ApplicationSonataClassificationBundle: ~
-            SonataMediaBundle: ~
             ApplicationSonataMediaBundle: ~
+            SonataMediaBundle: ~
 
 
 # Swiftmailer Configuration
@@ -109,15 +109,14 @@ sonata_block:
         sonata.admin.block.search_result:
             contexts:   [admin]
 
-# Sonata Media Configuration
 sonata_media:
     # if you don't use default namespace configuration
     #class:
     #    media: MyVendor\MediaBundle\Entity\Media
     #    gallery: MyVendor\MediaBundle\Entity\Gallery
     #    gallery_has_media: MyVendor\MediaBundle\Entity\GalleryHasMedia
-    default_context: default
-    db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr
+    db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr it is mandatory to choose one here
+    default_context: default # you need to set a context
     contexts:
         default:  # the default context is mandatory
             providers:
@@ -125,6 +124,7 @@ sonata_media:
                 - sonata.media.provider.youtube
                 - sonata.media.provider.image
                 - sonata.media.provider.file
+                - sonata.media.provider.vimeo
 
             formats:
                 small: { width: 100 , quality: 70}
@@ -136,7 +136,8 @@ sonata_media:
 
     filesystem:
         local:
-            directory:  "%kernel.root_dir%/../web/uploads/media"
+#            directory:  "%kernel.root_dir%/../web/uploads/media" #flex
+            directory:  "%kernel.root_dir%/../web/uploads/media" #non-flex
             create:     false
 
 # Nelmio CORS Configuration

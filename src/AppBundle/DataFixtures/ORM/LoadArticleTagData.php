@@ -25,7 +25,20 @@ class LoadArticleTagData extends AbstractFixture implements OrderedFixtureInterf
     {
         $faker = Factory::create('ru_RU');
 
-        $context = $manager->getRepository('ApplicationSonataClassificationBundle:Context')->find('default');
+        $context  = new Context();
+
+        $context->setEnabled(true);
+        $context->setId('default');
+        $context->setName('Default');
+
+        $manager->persist($context);
+
+        $manager->flush();
+
+        /*
+         * @var ContextInterface $context
+         */
+        $context = $manager->getRepository(Context::class)->find('default');
 
         for ($i = 0; $i < 50; $i++) {
             $tag = new Tag();

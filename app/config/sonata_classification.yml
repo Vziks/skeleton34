@@ -2,6 +2,11 @@
 
 sonata_classification:
     # ...
+    class:
+        tag: "Application\Sonata\ClassificationBundle\Entity\Tag"
+        category: "Application\Sonata\ClassificationBundle\Entity\Category"
+        collection: "Application\Sonata\ClassificationBundle\Entity\Collection"
+        context: "Application\Sonata\ClassificationBundle\Entity\Context"
 
 doctrine:
     orm:
@@ -11,5 +16,5 @@ doctrine:
                 #query_cache_driver: apc
                 #result_cache_driver: apc
                 mappings:
-                    #ApplicationSonataClassificationBundle: ~
+                    ApplicationSonataClassificationBundle: ~
                     SonataClassificationBundle: ~

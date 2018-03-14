@@ -43,16 +43,16 @@
         },
         {
             "name": "adw/config-bundle",
-            "version": "v1.4",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/prodhub/config-bundle.git",
-                "reference": "f227f440450fda6b652f1dd9f1ba9b9c7045a319"
+                "reference": "d9170d0b174141a1e2f18e91a3fa50ee78f1ee9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/prodhub/config-bundle/get/f227f440450fda6b652f1dd9f1ba9b9c7045a319.zip",
-                "reference": "f227f440450fda6b652f1dd9f1ba9b9c7045a319",
+                "url": "https://bitbucket.org/prodhub/config-bundle/get/d9170d0b174141a1e2f18e91a3fa50ee78f1ee9f.zip",
+                "reference": "d9170d0b174141a1e2f18e91a3fa50ee78f1ee9f",
                 "shasum": ""
             },
             "require": {
@@ -75,7 +75,7 @@
                 }
             ],
             "homepage": "https://bitbucket.org/prodhub/config-bundle",
-            "time": "2017-10-25T12:41:58+00:00"
+            "time": "2018-03-13T12:29:10+00:00"
         },
         {
             "name": "adw/geoip-bundle",
@@ -226,16 +226,16 @@
         },
         {
             "name": "adw/user-bundle",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://bitbucket.org/prodhub/adw-user-bundle.git",
-                "reference": "f9697dfccb38c01dd9c9ffe5014807551aa5299c"
+                "reference": "349d73d54bb2c005b997d8c9c5417387dce4193d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://bitbucket.org/prodhub/adw-user-bundle/get/f9697dfccb38c01dd9c9ffe5014807551aa5299c.zip",
-                "reference": "f9697dfccb38c01dd9c9ffe5014807551aa5299c",
+                "url": "https://bitbucket.org/prodhub/adw-user-bundle/get/349d73d54bb2c005b997d8c9c5417387dce4193d.zip",
+                "reference": "349d73d54bb2c005b997d8c9c5417387dce4193d",
                 "shasum": ""
             },
             "require": {
@@ -260,9 +260,9 @@
             ],
             "homepage": "https://bitbucket.org/prodhub/adw-user-bundle",
             "support": {
-                "source": "https://bitbucket.org/prodhub/adw-user-bundle/src/f9697dfccb38c01dd9c9ffe5014807551aa5299c/?at=1.0.3"
+                "source": "https://bitbucket.org/prodhub/adw-user-bundle/src/349d73d54bb2c005b997d8c9c5417387dce4193d/?at=1.0.4"
             },
-            "time": "2017-12-08T12:19:27+00:00"
+            "time": "2018-03-13T14:43:08+00:00"
         },
         {
             "name": "behat/transliterator",
