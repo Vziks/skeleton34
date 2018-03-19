@@ -10,3 +10,6 @@ services:
 
     AppBundle\DataFixtures\ORM\LoadArticleDataFixture:
         tags: [doctrine.fixture.orm]
+
+    AppBundle\DataFixtures\ORM\LoadAdminData:
+        tags: [doctrine.fixture.orm]

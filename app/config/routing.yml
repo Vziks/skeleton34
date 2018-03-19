@@ -1,7 +1,7 @@
-adw_user:
-    resource: "@ADWUserBundle/Controller/"
-    type:     annotation
-    prefix:   /
+#adw_user:
+#    resource: "@ADWUserBundle/Controller/"
+#    type:     annotation
+#    prefix:   /
 
 fos_user:
    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
@@ -48,3 +48,12 @@ app:
 #hwi_oauth_login:
 #    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
 #    prefix:   /login
+
+
+sonata_user_admin_security:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+
+sonata_user_admin_resetting:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.xml'
+    prefix: /admin/resetting
