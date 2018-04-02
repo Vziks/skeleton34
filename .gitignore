@@ -39,3 +39,13 @@
 /web/robots.txt
 
 /log/
+
+node_modules/
+
+# frontend #
+######################
+/public
+/frontend/public
+/.sass-cache
+/bower_components
+/yarn.lock
