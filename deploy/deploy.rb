@@ -37,6 +37,9 @@ after 'deploy:updated', 'deploy:migrate'
 # Fix Sonata Media contexts
 after 'deploy:updated', 'deploy:fix_media'
 
+# CKEditor Install
+after 'deploy:updated', 'deploy:ckeditor'
+
 # Build html
 after 'deploy:updated', 'deploy:dump_api_doc'
 
@@ -71,6 +74,12 @@ namespace :deploy do
     task :migrate do
         on roles(:db) do
             symfony_console "doctrine:migrations:migrate", "--no-interaction"
+        end
+    end
+
+    task :ckeditor do
+        on roles(:db) do
+            symfony_console "ckeditor:install", "--clear=drop"
         end
     end
 
