@@ -75,7 +75,7 @@ monolog:
 ```
 #!bash
 
-bin/php-cs-fixer fix src
+bin/php-cs-fixer fix src --rules=@Symfony
 ```
 
 ***

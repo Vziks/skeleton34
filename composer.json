@@ -39,6 +39,7 @@
         "egeloen/ckeditor-bundle": "^6.0",
         "friendsofphp/php-cs-fixer": "^2.10",
         "friendsofsymfony/jsrouting-bundle": "^1.6",
+        "friendsofsymfony/rest-bundle": "^2.3",
         "friendsofsymfony/user-bundle": "^2.1",
         "gedmo/doctrine-extensions": "^2.4",
         "hwi/oauth-bundle": "^0.5.3",

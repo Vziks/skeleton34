@@ -53,6 +53,7 @@ class AppKernel extends Kernel
 //            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 
             new FOS\UserBundle\FOSUserBundle(),
+            new \FOS\RestBundle\FOSRestBundle(),
 
             new ADW\ConfigBundle\ADWConfigBundle(),
             new ADW\GeoIpBundle\ADWGeoIpBundle(),
