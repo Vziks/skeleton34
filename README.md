@@ -1,6 +1,44 @@
 # Что такое? #
 База для новых проектов. Symfony 3.4.
-***
+
+## Приступая к работе
+
+На проекте используется Continuous Integration и Continuous Deployment
+
+Исходники frontend расположены в директории ./frontend/ изучите ./frontend/README.md
+
+## Известные хосты, ветки окружения, CI+CD
+
+| Окружение | Git branch  | Автодеплой | Хост |
+|-----------|------------ |------------|------------|
+| prod      | master      | нет        | 
+| stag      | stag        | нет        | 
+| demo1     | dev         | нет        | 
+
+Проект Codeship:
+
+https://app.codeship.com/projects/252757
+
+## Схема ветвления git
+
+**Минимальная:**
+
+1. master -> task_1234567_extra_alias
+2. master <- pr <- task_1234567_extra_alias
+
+**Задача из task tracker + демонстрация на тестовом**
+
+1. master -> task_1234567_extra_alias _(начало работы над задачей)_
+2. dev <- pr <- task_1234567_extra_alias _(демонстрация функционала на тестовом хосте)_
+3. master <- pr <- task_1234567_extra_alias _(деплой на боевой)_
+
+**Задача из task tracker + демонстрация на тестовом + демонстрация на staging**
+
+1. master -> task_1234567_extra_alias _(начало работы над задачей)_
+2. dev <- pr <- task_1234567_extra_alias _(демонстрация функционала на тестовом хосте)_
+3. stag <- pr <- task_1234567_extra_alias _(предрелизный показ)_
+4. master <- pr <- stag _(деплой на боевой)_
+
 # Что там есть? #
 
 
