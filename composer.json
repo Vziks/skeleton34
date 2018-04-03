@@ -111,7 +111,8 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         },
-        "branch-alias": null
+        "branch-alias": null,
+        "ckeditor-clear": "drop"
     },
     "repositories": [
         { "type": "vcs", "url": "https://bitbucket.org/prodhub/common-bundle.git" },
