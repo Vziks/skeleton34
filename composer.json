@@ -70,6 +70,7 @@
         "symfony/polyfill-apcu": "^1.0",
         "symfony/swiftmailer-bundle": "^2.3.10",
         "symfony/symfony": "3.4.*",
+        "symfony/web-server-bundle": "^4.0",
         "twig/twig": "^2.4"
     },
     "require-dev": {
