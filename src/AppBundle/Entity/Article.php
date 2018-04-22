@@ -98,7 +98,7 @@ class Article
      *
      * @return Article
      */
-    public function addTag(\Application\Sonata\ClassificationBundle\Entity\Tag $tag)
+    public function addTag(Tag $tag)
     {
         $this->tags[] = $tag;
 
@@ -110,7 +110,7 @@ class Article
      *
      * @param \Application\Sonata\ClassificationBundle\Entity\Tag $tag
      */
-    public function removeTag(\Application\Sonata\ClassificationBundle\Entity\Tag $tag)
+    public function removeTag(Tag $tag)
     {
         $this->tags->removeElement($tag);
     }

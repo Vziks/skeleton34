@@ -7,11 +7,8 @@
 
 namespace AppBundle\DataFixtures\ORM;
 
-use AppBundle\AppBundle;
 use AppBundle\Entity\Article;
-use AppBundle\Entity\Resource;
 use Application\Sonata\MediaBundle\Entity\Media;
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -75,8 +72,8 @@ class LoadArticleDataFixture extends AbstractFixture implements ContainerAwareIn
             $keys = array_rand(is_array($tags) ? $tags : iterator_to_array($tags), rand(2, count($tags)));
 
             foreach ($keys as $key) {
-                $asdasd = $tags[$key];
-                $article->addTag($asdasd);
+                $tagKey = $tags[$key];
+                $article->addTag($tagKey);
             }
 
             $manager->persist($article);

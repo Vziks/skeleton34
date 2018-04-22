@@ -2,13 +2,12 @@
 
 namespace AppBundle\Admin;
 
-use Doctrine\DBAL\Types\StringType;
 use Ivory\CKEditorBundle\Form\Type\CKEditorType;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
-use Sonata\AdminBundle\Admin\AdminInterface;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Form\Type\ModelAutocompleteType;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
@@ -55,7 +54,7 @@ class ArticleAdmin extends AbstractAdmin
             ->add('title', TextType::class)
             ->add('preview', CKEditorType::class)
             ->add('content', CKEditorType::class)
-            ->add('tags', 'sonata_type_model_autocomplete', [
+            ->add('tags', ModelAutocompleteType::class , [
                 'property' => "name",
                 'multiple' => true,
                 'template'=>'AppBundle:Admin:sonata_type_model_autocomplete_add.html.twig'
