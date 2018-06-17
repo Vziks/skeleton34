@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ ! -f app/phpunit.xml ]; then
-    cp app/phpunit.xml.dist app/phpunit.xml
+    cp phpunit.xml.dist phpunit.xml
 fi
 
 rm -f var/logs/**/*.log var/logs/*.log
