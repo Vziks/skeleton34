@@ -16,6 +16,14 @@
         <ini name="error_reporting" value="-1" />
         <server name="KERNEL_DIR" value="app/" />
         <env name="SYMFONY_DEPRECATIONS_HELPER" value="weak"/>
+
+
+        <server name="SYMFONY__DATABASE__HOST" value="127.0.0.1" />
+        <server name="SYMFONY__DATABASE__NAME" value="symfony34" />
+        <server name="SYMFONY__DATABASE__PASSWORD" value="123" />
+        <server name="SYMFONY__DATABASE__PORT" value="null" />
+        <server name="SYMFONY__DATABASE__USER" value="root" />
+
     </php>
 
     <testsuites>
