@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ ! -f app/phpunit.xml ]; then
+if [ ! -f phpunit.xml ]; then
     cp phpunit.xml.dist phpunit.xml
 fi
 
